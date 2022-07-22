@@ -81,10 +81,24 @@ container3.appendChild(resultAmount)
 
 //   }
 
+totalAmount.addEventListener("keyup", myScript)
+tipAmount.addEventListener("keyup", myScript)
 
-tipAmount.addEventListener("keypress", total = (e) => {
-    if (e.key === "Enter") {
-        let convertedNum = Number(totalAmount.value)
+// tipAmount.addEventListener("keypress", total = (e) => {
+//     if (e.key === "Enter") {
+//         let convertedNum = Number(totalAmount.value)
+
+//         let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
+//         let totalBill = totaltip + convertedNum
+
+//         let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
+//         // resultAmount.textContent = `$ ${total}`
+//         resultAmount.textContent = `$ ${rounded}`
+//     }
+// })
+ function myScript(){
+
+   let convertedNum = Number(totalAmount.value)
 
         let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
         let totalBill = totaltip + convertedNum
@@ -92,16 +106,17 @@ tipAmount.addEventListener("keypress", total = (e) => {
         let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
         // resultAmount.textContent = `$ ${total}`
         resultAmount.textContent = `$ ${rounded}`
-    }
-})
+
+}
+myScript()
 
 increaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
 
     numberOfPeople.innerText++
-    let totaltip = ((convertedNum / 100) * tipAmount.value) 
+    let totaltip = ((convertedNum / 100) * tipAmount.value)
     let totalBill = totaltip + convertedNum
-    let perPerson = totalBill/ numberOfPeople.textContent
+    let perPerson = totalBill / numberOfPeople.textContent
     let rounded = perPerson.toFixed(3)
     resultAmount.textContent = `$ ${rounded}`
 }
@@ -111,9 +126,9 @@ decreaseP.onclick = () => {
 
     numberOfPeople.innerText -= 1
     // numberOfPeople.value -=1
-    let totaltip = ((convertedNum / 100) * tipAmount.value) 
+    let totaltip = ((convertedNum / 100) * tipAmount.value)
     let totalBill = totaltip + convertedNum
-    let perPerson = totalBill/ numberOfPeople.textContent
+    let perPerson = totalBill / numberOfPeople.textContent
     let rounded = perPerson.toFixed(3)
     resultAmount.textContent = `$ ${rounded}`
 }
