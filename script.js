@@ -87,7 +87,7 @@ tipAmount.addEventListener("keypress", total = (e) => {
         let convertedNum = Number(totalAmount.value)
 
         let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
-        let totalBill = totaltip+convertedNum
+        let totalBill = totaltip + convertedNum
 
         let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
         // resultAmount.textContent = `$ ${total}`
@@ -99,9 +99,10 @@ increaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
 
     numberOfPeople.innerText++
-    let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.innerText
+    let totaltip = ((convertedNum / 100) * tipAmount.value) 
     let totalBill = totaltip + convertedNum
-    let rounded = totalBill.toFixed(3)
+    let perPerson = totalBill/ numberOfPeople.textContent
+    let rounded = perPerson.toFixed(3)
     resultAmount.textContent = `$ ${rounded}`
 }
 
@@ -110,9 +111,9 @@ decreaseP.onclick = () => {
 
     numberOfPeople.innerText -= 1
     // numberOfPeople.value -=1
-    let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
+    let totaltip = ((convertedNum / 100) * tipAmount.value) 
     let totalBill = totaltip + convertedNum
-
-    let rounded = totalBill.toFixed(3)
+    let perPerson = totalBill/ numberOfPeople.textContent
+    let rounded = perPerson.toFixed(3)
     resultAmount.textContent = `$ ${rounded}`
 }
