@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@200&display=swap');
+
+html{
+    /* background: #8888; */
+    background-image: linear-gradient(130deg, rgb(145, 168, 188), rgba(136, 136, 136, 0.533));
+    height: 100vh;
+
+}
+.container1 {
+    font-family: 'Trispace', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    max-width: 19%;
+    min-width: 270px;
+    height: 50vh;
+    margin: auto;
+    /* background: rgb(20, 38, 56); */
+    background-image: linear-gradient(130deg,rgb(18, 64, 79),rgb(16, 93, 67));
+    padding: 1rem 1rem 10rem 1rem;
+    border-radius: 9px;
+    color: white;
+}
+
+.h2_1{
+    margin-top: 2.4rem;
+}
+.h2_2{
+    margin-top: 2.6rem;
+}
+
+.inputs {
+    outline: none;
+    padding: 1px 1px 1px 9px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+
+
+
+.incrementBtn {
+    background: rgb(240, 89, 7);
+    /* list-style: none; */
+    border: none;
+    border-radius: 11px;
+    margin: 10px;
+    padding: 5px 9px;
+    cursor: pointer;
+    margin: 1px;
+    transition: all .5s ease;
+}
+
+.decrementBtn {
+    background: rgb(240, 89, 7);
+
+    /* list-style: none; */
+    border: none;
+    border-radius: 11px;
+    margin: 10px;
+    padding: 5px 9px;
+    cursor: pointer;
+    margin: 1px;
+    transition: all .5s ease;
+
+}
+.incrementBtn:hover{
+    background: rgb(48, 147, 200);
+}
+.decrementBtn:hover{
+    background: rgb(48, 147, 200);
+
+}
+.decrementBtn:checked{
+    background: rgb(17, 122, 127);
+}
+
+.numberOfPeople {
+    margin: 0.6rem;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultAmount {
+    margin: 0.1rem;
+    padding: 0.2rem;
+}
