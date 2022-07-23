@@ -84,6 +84,9 @@ container3.appendChild(resultAmount)
 totalAmount.addEventListener("keyup", myScript)
 tipAmount.addEventListener("keyup", myScript)
 
+   //      // All three methods and all of them are worked
+      //   //    Method 1
+
 // tipAmount.addEventListener("keypress", total = (e) => {
 //     if (e.key === "Enter") {
 //         let convertedNum = Number(totalAmount.value)
@@ -96,7 +99,27 @@ tipAmount.addEventListener("keyup", myScript)
 //         resultAmount.textContent = `$ ${rounded}`
 //     }
 // })
- function myScript(){
+
+   //     // Method 2    in  ES6 sentence
+
+// tipAmount.addEventListener("keyup", total = () => {
+        
+//             let convertedNum = Number(totalAmount.value)
+    
+//             let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
+//             let totalBill = totaltip + convertedNum
+    
+//             let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
+//             // resultAmount.textContent = `$ ${total}`
+//             resultAmount.textContent = `$ ${rounded}`
+        
+//     })
+// total()
+
+
+//         //  Method 3 by ES5 sentence or traditionl sentence but for this you have to run line 84 and 85   this is the most dynamic 
+
+ function myScript (){
 
    let convertedNum = Number(totalAmount.value)
 
