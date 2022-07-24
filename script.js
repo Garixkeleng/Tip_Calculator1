@@ -123,7 +123,7 @@ function myScript() {
 
     let convertedNum = Number(totalAmount.value)
 
-    let totaltip = ((convertedNum / 100) * tipAmount.value) 
+    let totaltip = ((convertedNum / 100) * tipAmount.value)
     let totalBill = totaltip + convertedNum
     let perPerson = totalBill / numberOfPeople.textContent
 
@@ -148,14 +148,16 @@ increaseP.onclick = () => {
 
 decreaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
-    if (numberOfPeople.innerText > 1) {
-        numberOfPeople.innerText -= 1
-        // and if you want to make it shorter then call  myScript() here instead of bottom lines
-        let totaltip = ((convertedNum / 100) * tipAmount.value)
-        let totalBill = totaltip + convertedNum
-        let perPerson = totalBill / numberOfPeople.textContent
-        let rounded = perPerson.toFixed(3)
-        resultAmount.textContent = `$ ${rounded}`
-    }
+    if (numberOfPeople.innerText <= 1) {
 
+        return
+    }
+    numberOfPeople.innerText -= 1
+
+    myScript()
+    // let totaltip = ((convertedNum / 100) * tipAmount.value)
+    // let totalBill = totaltip + convertedNum
+    // let perPerson = totalBill / numberOfPeople.textContent
+    // let rounded = perPerson.toFixed(3)
+    // resultAmount.textContent = `$ ${rounded}`
 }
