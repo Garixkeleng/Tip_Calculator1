@@ -84,8 +84,8 @@ container3.appendChild(resultAmount)
 totalAmount.addEventListener("keyup", myScript)
 tipAmount.addEventListener("keyup", myScript)
 
-   //      // All three methods and all of them are worked
-      //   //    Method 1
+//      // All three methods and all of them are worked
+//   //    Method 1
 
 // tipAmount.addEventListener("keypress", total = (e) => {
 //     if (e.key === "Enter") {
@@ -100,35 +100,36 @@ tipAmount.addEventListener("keyup", myScript)
 //     }
 // })
 
-   //     // Method 2    in  ES6 sentence
+//     // Method 2    in  ES6 sentence
 
 // tipAmount.addEventListener("keyup", total = () => {
-        
+
 //             let convertedNum = Number(totalAmount.value)
-    
+
 //             let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
 //             let totalBill = totaltip + convertedNum
-    
+
 //             let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
 //             // resultAmount.textContent = `$ ${total}`
 //             resultAmount.textContent = `$ ${rounded}`
-        
+
 //     })
 // total()
 
 
 //         //  Method 3 by ES5 sentence or traditionl sentence but for this you have to run line 84 and 85   this is the most dynamic 
 
- function myScript (){
+function myScript() {
 
-   let convertedNum = Number(totalAmount.value)
+    let convertedNum = Number(totalAmount.value)
 
-        let totaltip = ((convertedNum / 100) * tipAmount.value) / numberOfPeople.textContent
-        let totalBill = totaltip + convertedNum
+    let totaltip = ((convertedNum / 100) * tipAmount.value) 
+    let totalBill = totaltip + convertedNum
+    let perPerson = totalBill / numberOfPeople.textContent
 
-        let rounded = totalBill.toFixed(3)    // toFixed id used to limit the number of floating point values
-        // resultAmount.textContent = `$ ${total}`
-        resultAmount.textContent = `$ ${rounded}`
+    let rounded = perPerson.toFixed(3)    // toFixed id used to limit the number of floating point values
+    // resultAmount.textContent = `$ ${total}`
+    resultAmount.textContent = `$ ${rounded}`
 
 }
 myScript()
@@ -146,12 +147,14 @@ increaseP.onclick = () => {
 
 decreaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
+    if (numberOfPeople.innerText > 1) {
+        numberOfPeople.innerText -= 1
+        // numberOfPeople.value -=1
+        let totaltip = ((convertedNum / 100) * tipAmount.value)
+        let totalBill = totaltip + convertedNum
+        let perPerson = totalBill / numberOfPeople.textContent
+        let rounded = perPerson.toFixed(3)
+        resultAmount.textContent = `$ ${rounded}`
+    }
 
-    numberOfPeople.innerText -= 1
-    // numberOfPeople.value -=1
-    let totaltip = ((convertedNum / 100) * tipAmount.value)
-    let totalBill = totaltip + convertedNum
-    let perPerson = totalBill / numberOfPeople.textContent
-    let rounded = perPerson.toFixed(3)
-    resultAmount.textContent = `$ ${rounded}`
 }
