@@ -138,6 +138,7 @@ increaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
 
     numberOfPeople.innerText++
+    // and if you want to make it shorter then call  myScript() here instead of bottom lines
     let totaltip = ((convertedNum / 100) * tipAmount.value)
     let totalBill = totaltip + convertedNum
     let perPerson = totalBill / numberOfPeople.textContent
@@ -149,7 +150,7 @@ decreaseP.onclick = () => {
     let convertedNum = Number(totalAmount.value)
     if (numberOfPeople.innerText > 1) {
         numberOfPeople.innerText -= 1
-        // numberOfPeople.value -=1
+        // and if you want to make it shorter then call  myScript() here instead of bottom lines
         let totaltip = ((convertedNum / 100) * tipAmount.value)
         let totalBill = totaltip + convertedNum
         let perPerson = totalBill / numberOfPeople.textContent
